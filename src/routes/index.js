@@ -2,13 +2,18 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Login from '../components/Login'
 import Register from '../components/Register'
-import Dashboard from '../components/Dashboard'
+import Home from "@/components/Home";
 import firebase from "firebase";
 
 Vue.use(Router)
 
 const router = new Router({
     routes: [
+		{
+			path: '/',
+			name: 'Home',
+			component: Home,
+		},
 		{
 			path: '/login',
 			name: 'login',
@@ -24,14 +29,6 @@ const router = new Router({
 			meta: {
 				hideForAuth: true
 			}
-		},
-		{
-			path: '/dashboard',
-			name: 'Dashboard',
-			component: Dashboard,
-			meta: {
-				requiresAuth: true
-			}
 		}
 	]
 });
@@ -40,7 +37,7 @@ router.beforeEach((to, from, next) => {
 	firebase.auth().onAuthStateChanged(function(user) {
 		if (to.matched.some(record => record.meta.hideForAuth)) {
 			if (user) {
-				next({ path: '/dashboard' });
+				next({ path: '/' });
 			} else {
 				next();
 			}

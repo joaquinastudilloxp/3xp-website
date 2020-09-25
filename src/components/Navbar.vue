@@ -64,8 +64,8 @@ export default {
         .auth()
         .signOut()
         .then(() => {
-          this.$router.replace({
-            name: "home"
+          this.$router.push({
+            name: "Home"
           });
         });
     }

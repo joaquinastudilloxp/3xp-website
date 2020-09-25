@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+		<br>
     <div class="row justify-content-center">
       <div class="col-md-8">
         <div class="card">
@@ -71,7 +72,7 @@ export default {
         .auth()
         .signInWithEmailAndPassword(this.form.email, this.form.password)
         .then(() => {
-          this.$router.replace({ name: "Dashboard" });
+          this.$router.push({ name: "Home" });
         })
         .catch(err => {
           this.error = err.message;
