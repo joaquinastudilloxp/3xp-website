@@ -164,6 +164,12 @@ import {mapGetters} from "vuex";
 export default {
 name: "Home",
 
+	data(){
+		return {
+			deviceId: null
+		}
+	},
+
 	mounted() {
 		if(localStorage.getItem('xtremepush.data')){
 			this.deviceId = JSON.parse(localStorage.getItem('xtremepush.data')).id;
