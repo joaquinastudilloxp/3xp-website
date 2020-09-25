@@ -82,7 +82,7 @@
 				</div>
 
 				<aside class="col-md-8 blog-sidebar">
-					<div class="embed-responsive embed-responsive-16by9" v-if="iframeUrl !== null">
+					<div class="embed-responsive embed-responsive-16by9" v-if="user.data !== null && deviceId !== null">
 						<iframe class="embed-responsive-item" :src="iframeUrl" allowfullscreen></iframe>
 					</div>
 					<div v-else class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
@@ -184,7 +184,7 @@ name: "Home",
 
 		iframeUrl(){
 			const siteUrl = 'https://pro-euw2-app.vocohub.com/sales-demo-sports-betting/main/app/index.html'
-			if(this.user.data.email && this.deviceId){
+			if(this.user.data.email !== undefined && this.user.data.email !== null && this.deviceId){
 				return `${siteUrl}?email=${this.user.data.email}&device_id=${this.deviceId}#/app/start`
 			}else {
 				return null

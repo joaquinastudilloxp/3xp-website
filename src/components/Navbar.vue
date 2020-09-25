@@ -65,7 +65,7 @@ export default {
         .signOut()
         .then(() => {
           this.$router.push({
-            name: "Home"
+            path: "/"
           });
         });
     }
