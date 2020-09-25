@@ -14,7 +14,7 @@
 
 		<main role="main" class="container">
 			<div class="row">
-				<div class="col-md-4 blog-main">
+				<div class="col-md-4 blog-main bg-light rounded">
 					<div class="sidebar-sticky pt-3">
 						<ul class="nav flex-column">
 							<li class="nav-item">
@@ -87,13 +87,15 @@
 					</div>
 					<div v-else class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
 						<div class="col-md-6 px-0">
-							<h1 class="display-4 font-italic">Play our exciting new daily free game to win great 3XPBet Prizes!</h1>
+							<h1 class="display-6 font-italic">Play our exciting new daily free game to win great 3XPBet Prizes!</h1>
 							<p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Play...</a></p>
 						</div>
 					</div>
 				</aside>
 			</div>
 		</main>
+
+		<br>
 
 		<div class="container">
 			<h1 class="blog-post-title">Play Online</h1>
