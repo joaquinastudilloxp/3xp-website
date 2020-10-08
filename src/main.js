@@ -23,6 +23,8 @@ firebase.auth().onAuthStateChanged(user => {
   store.dispatch("fetchUser", user);
 });
 
+Vue.prototype.xp = window.xtremepush
+
 new Vue({
   router,
   store,
